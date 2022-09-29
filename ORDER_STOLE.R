@@ -1,6 +1,3 @@
-##################################################
-##### ROBO DE ORDENES BITEL ONLINE
-##################################################
 
 library(tidyverse)
 library(lubridate)
@@ -35,7 +32,7 @@ names(db2)[8]='DV_BRANCH'
 ##################################################
 
 ### PONER LOS NOMBRE DE LAS BRANCH "PUNBR","MADBR"
-bd4=filter(db2, BRANCH%in%c("PUNBR","MADBR"),status_id%in%c("6","4"))%>%
+bd4=filter(db2, BRANCH%in%c("PUNBR","MADBR"),status_id%in%c("6","4","-1"))%>%
   filter(fecha>=Sys.Date()-3&fecha<=Sys.Date())
 
 ### SELECCIONAMOS LAS COLUMNAS
@@ -93,7 +90,7 @@ write.xlsx(CPUN, file = "CPUN.xlsx", row.names = FALSE)
 ##################################################
 
 ### PONER LOS NOMBRE DE LAS BRANCH "ANCBR","HUABR"
-bd4A=filter(db2, BRANCH%in%c("ANCBR","HUABR"),status_id%in%c("6","4"))%>%
+bd4A=filter(db2, BRANCH%in%c("ANCBR","HUABR"),status_id%in%c("6","4","-1"))%>%
   filter(fecha>=Sys.Date()-3&fecha<=Sys.Date())
 
 ### SELECCIONAMOS LAS COLUMNAS
@@ -151,7 +148,7 @@ write.xlsx(CANC, file = "CANC.xlsx", row.names = FALSE)
 ##################################################
 
 ### PONER LOS NOMBRE DE LAS BRANCH AREBR
-bd4ARE=filter(db2, BRANCH=="AREBR",status_id%in%c("6","4"))%>%
+bd4ARE=filter(db2, BRANCH=="AREBR",status_id%in%c("6","4","-1"))%>%
   filter(fecha>=Sys.Date()-3&fecha<=Sys.Date())
 
 ### SELECCIONAMOS LAS COLUMNAS
@@ -209,7 +206,7 @@ write.xlsx(CARE, file = "CARE.xlsx", row.names = FALSE)
 ##################################################
 
 ### PONER LOS NOMBRE DE LAS BRANCH AYABR
-bd4AYA=filter(db2, BRANCH=="AYABR",status_id%in%c("6","4"))%>%
+bd4AYA=filter(db2, BRANCH=="AYABR",status_id%in%c("6","4","-1"))%>%
   filter(fecha>=Sys.Date()-3&fecha<=Sys.Date())
 
 ### SELECCIONAMOS LAS COLUMNAS
@@ -267,7 +264,7 @@ write.xlsx(CAYA, file = "CAYA.xlsx", row.names = FALSE)
 ##################################################
 
 ### PONER LOS NOMBRE DE LAS BRANCH CAJBR
-bd4CAJ=filter(db2, BRANCH=="CAJBR",status_id%in%c("6","4"))%>%
+bd4CAJ=filter(db2, BRANCH=="CAJBR",status_id%in%c("6","4","-1"))%>%
   filter(fecha>=Sys.Date()-3&fecha<=Sys.Date())
 
 ### SELECCIONAMOS LAS COLUMNAS
@@ -326,7 +323,7 @@ write.xlsx(CCAJ, file = "CCAJ.xlsx", row.names = FALSE)
 ##################################################
 
 ### PONER LOS NOMBRE DE LAS BRANCH "CUSBR APUBR"
-bd4CUS=filter(db2, BRANCH%in%c("CUSBR","APUBR"),status_id%in%c("6","4"))%>%
+bd4CUS=filter(db2, BRANCH%in%c("CUSBR","APUBR"),status_id%in%c("6","4","-1"))%>%
   filter(fecha>=Sys.Date()-3&fecha<=Sys.Date())
 
 ### SELECCIONAMOS LAS COLUMNAS
@@ -386,7 +383,7 @@ write.xlsx(CCUS, file = "CCUS.xlsx", row.names = FALSE)
 ##################################################
 
 ### PONER LOS NOMBRE DE LAS BRANCH "HUNBR UCABR"
-bd4HUN=filter(db2, BRANCH%in%c("HUNBR","UCABR"),status_id%in%c("6","4"))%>%
+bd4HUN=filter(db2, BRANCH%in%c("HUNBR","UCABR"),status_id%in%c("6","4","-1"))%>%
   filter(fecha>=Sys.Date()-3&fecha<=Sys.Date())
 
 ### SELECCIONAMOS LAS COLUMNAS
@@ -444,7 +441,7 @@ write.xlsx(CHUN, file = "CHUN.xlsx", row.names = FALSE)
 ##################################################
 
 ### PONER LOS NOMBRE DE LAS BRANCH ICABR
-bd4ICA=filter(db2, BRANCH=="ICABR",status_id%in%c("6","4"))%>%
+bd4ICA=filter(db2, BRANCH=="ICABR",status_id%in%c("6","4","-1"))%>%
   filter(fecha>=Sys.Date()-3&fecha<=Sys.Date())
 
 ### SELECCIONAMOS LAS COLUMNAS
@@ -503,7 +500,7 @@ write.xlsx(CICA, file = "CICA.xlsx", row.names = FALSE)
 ##################################################
 
 ### PONER LOS NOMBRE DE LAS BRANCH JUNBR
-bd4JUN=filter(db2, BRANCH=="JUNBR",status_id%in%c("6","4"))%>%
+bd4JUN=filter(db2, BRANCH=="JUNBR",status_id%in%c("6","4","-1"))%>%
   filter(fecha>=Sys.Date()-3&fecha<=Sys.Date())
 
 ### SELECCIONAMOS LAS COLUMNAS
@@ -562,7 +559,7 @@ write.xlsx(CJUN, file = "CJUN.xlsx", row.names = FALSE)
 ##################################################
 
 ### PONER LOS NOMBRE DE LAS BRANCH LALBR
-bd4LAL=filter(db2, BRANCH=="LALBR",status_id%in%c("6","4"))%>%
+bd4LAL=filter(db2, BRANCH=="LALBR",status_id%in%c("6","4","-1"))%>%
   filter(fecha>=Sys.Date()-3&fecha<=Sys.Date())
 
 ### SELECCIONAMOS LAS COLUMNAS
@@ -620,7 +617,7 @@ write.xlsx(CLAL, file = "CLAL.xlsx", row.names = FALSE)
 ##################################################
 
 ### PONER LOS NOMBRE DE LAS BRANCH LAMBR
-bd4LAM=filter(db2, BRANCH=="LAMBR",status_id%in%c("6","4"))%>%
+bd4LAM=filter(db2, BRANCH=="LAMBR",status_id%in%c("6","4","-1"))%>%
   filter(fecha>=Sys.Date()-3&fecha<=Sys.Date())
 
 ### SELECCIONAMOS LAS COLUMNAS
@@ -677,7 +674,7 @@ write.xlsx(CLAM, file = "CLAM.xlsx", row.names = FALSE)
 ##################################################
 
 ### PONER LOS NOMBRE DE LAS BRANCH L1BR
-bd4L1=filter(db2, BRANCH=="LI1BR",status_id%in%c("6","4"))%>%
+bd4L1=filter(db2, BRANCH=="LI1BR",status_id%in%c("6","4","-1"))%>%
   filter(fecha>=Sys.Date()-3&fecha<=Sys.Date())
 
 ### SELECCIONAMOS LAS COLUMNAS
@@ -735,7 +732,7 @@ write.xlsx(CL1, file = "CL1.xlsx", row.names = FALSE)
 ##################################################
 
 ### PONER LOS NOMBRE DE LAS BRANCH LI2BR
-bd4L2=filter(db2, BRANCH=="LI2BR",status_id%in%c("6","4"))%>%
+bd4L2=filter(db2, BRANCH=="LI2BR",status_id%in%c("6","4","-1"))%>%
   filter(fecha>=Sys.Date()-3&fecha<=Sys.Date())
 
 ### SELECCIONAMOS LAS COLUMNAS
@@ -793,7 +790,7 @@ write.xlsx(CL2, file = "CL2.xlsx", row.names = FALSE)
 ##################################################
 
 ### PONER LOS NOMBRE DE LAS BRANCH LI3BR
-bd4L3=filter(db2, BRANCH=="LI3BR",status_id%in%c("6","4"))%>%
+bd4L3=filter(db2, BRANCH=="LI3BR",status_id%in%c("6","4","-1"))%>%
   filter(fecha>=Sys.Date()-3&fecha<=Sys.Date())
 
 ### SELECCIONAMOS LAS COLUMNAS
@@ -851,7 +848,7 @@ write.xlsx(CL3, file = "CL3.xlsx", row.names = FALSE)
 ##################################################
 
 ### PONER LOS NOMBRE DE LAS BRANCH LI4BR
-bd4L4=filter(db2, BRANCH=="LI4BR",status_id%in%c("6","4"))%>%
+bd4L4=filter(db2, BRANCH=="LI4BR",status_id%in%c("6","4","-1"))%>%
   filter(fecha>=Sys.Date()-3&fecha<=Sys.Date())
 
 ### SELECCIONAMOS LAS COLUMNAS
@@ -908,7 +905,7 @@ write.xlsx(CL4, file = "CL4.xlsx", row.names = FALSE)
 ##### ORDENES ROBADAS LORBR
 ##################################################
 ### PONER LOS NOMBRE DE LAS BRANCH LORBR
-bd4LO=filter(db2, BRANCH=="LORBR",status_id%in%c("6","4"))%>%
+bd4LO=filter(db2, BRANCH=="LORBR",status_id%in%c("6","4","-1"))%>%
 filter(fecha>=Sys.Date()-3&fecha<=Sys.Date())
 ### SELECCIONAMOS LAS COLUMNAS
 CLO=bd4LO[,c("N_ORDEN","VENDEDOR","fecha","ID_NO","CONSULT_DESCRIPTION")]
@@ -950,7 +947,7 @@ write.xlsx(CLO, file = "CLO.xlsx", row.names = FALSE)
 ##### ORDENES ROBADAS PIUBR
 ##################################################
 ### PONER LOS NOMBRE DE LAS BRANCH PIUBR
-bd4PI=filter(db2, BRANCH=="PIUBR",status_id%in%c("6","4"))%>%
+bd4PI=filter(db2, BRANCH=="PIUBR",status_id%in%c("6","4","-1"))%>%
 filter(fecha>=Sys.Date()-3&fecha<=Sys.Date())
 ### SELECCIONAMOS LAS COLUMNAS
 CPI=bd4PI[,c("N_ORDEN","VENDEDOR","fecha","ID_NO","CONSULT_DESCRIPTION")]
@@ -992,7 +989,7 @@ write.xlsx(CPI, file = "CPI.xlsx", row.names = FALSE)
 ##### ORDENES ROBADAS SANBR AMABR
 ##################################################
 ### PONER LOS NOMBRE DE LAS BRANCH "SANBR AMABR"
-bd4SA=filter(db2, BRANCH%in%c("SANBR","AMABR"),status_id%in%c("6","4"))%>%
+bd4SA=filter(db2, BRANCH%in%c("SANBR","AMABR"),status_id%in%c("6","4","-1"))%>%
 filter(fecha>=Sys.Date()-3&fecha<=Sys.Date())
 ### SELECCIONAMOS LAS COLUMNAS
 CSAN=bd4SA[,c("N_ORDEN","VENDEDOR","fecha","ID_NO","CONSULT_DESCRIPTION")]
@@ -1035,7 +1032,7 @@ write.xlsx(CSAN, file = "CSAN.xlsx", row.names = FALSE)
 ##### ORDENES ROBADAS TACBR
 ##################################################
 ### PONER LOS NOMBRE DE LAS BRANCH TACBR
-bd4TA=filter(db2, BRANCH=="TACBR",status_id%in%c("6","4"))%>%
+bd4TA=filter(db2, BRANCH=="TACBR",status_id%in%c("6","4","-1"))%>%
 filter(fecha>=Sys.Date()-3&fecha<=Sys.Date())
 ### SELECCIONAMOS LAS COLUMNAS
 CTA=bd4TA[,c("N_ORDEN","VENDEDOR","fecha","ID_NO","CONSULT_DESCRIPTION")]
